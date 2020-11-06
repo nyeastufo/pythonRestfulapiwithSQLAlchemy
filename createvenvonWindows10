@@ -1,0 +1,19 @@
+I demonstrate how to create venv on Windows 10 using WSL, and install Ubuntu 20.04 first, then create the venv for my project.
+
+Then I realized that I can try it on Windows 10, it may not work very well, but worth to try and compare.
+
+step 1: create project directory, change to this directory, then create venv
+
+python -m venv env
+
+step 2: install virtualenvwrapper and / or virtualenvwrapper-win
+
+pip install virtualenvwrapper
+
+pip install virtualenvwrapper-win
+
+step 3: start the venv
+
+D:\projects\flask\restfulapidemo1>env\Scripts\activate.bat
+
+That is it, will continue try and see if it works, stay tune.
