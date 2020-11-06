@@ -1,0 +1,63 @@
+A Virtual Environment or a “venv” is a Python module that creates a unique environment for each task or project. It installs the packages we need that are unique to that setting while keeping your projects neatly organized. Additionally, venv never actually modifies the system’s default Python versions or modules that are installed on the system. Using venv essentially allows for a unique working environment while avoiding any disruptions to other variants of Python that are used, but not related to our project.
+
+When I start this project, I realized that the Python 3.9 has some new requirement (not from 3.9, but the old 3.4 is different) for virtualenv setting.
+
+I build this project on Windows 10, so I guess my confusion can be a good answer to other people who may fall into the similar trap what I experienced.
+
+Since most of the venv was really close tie to linux (include MacOS), so I believe that use WSL is a good idea.
+
+In 2016, Microsoft launched Windows Subsystem for Linux (WSL) which brought robust unix functionality to Windows. In May 2019, Microsoft announced the release of WSL 2 which includes an updated architecture that improved many aspects of WSL - especially file system performance. I have been following WSL for a while but now that WSL 2 is nearing general release, I decided to install it and try it out. 
+
+First of all, you need to enable the feature first, then install the linux distro that works with WSL.
+
+step 1: enable WSL on Windows 10
+Go to Start > then search for “Turn Windows features on or off.”
+Click the link to open the Windows control panel. 
+Next, open the Windows features pop-up menu. 
+Scroll down in that list to locate the “Windows Subsystem for Linux” option and select the checkbox.
+Reboot.
+
+step 2: install linux distro (here I install Ubuntu 20.04 LTS distribution)
+locate and install them from the Microsoft Store. We recommend starting off with a Ubuntu 20.04 LTS distribution as it’s up to date, has an excellent support community, and is well documented.
+
+step 3: run Ubuntu on Windows 10 and update
+Once the download has completed, type “Ubuntu 18.04 LTS” into your Start menu.
+Next, you’ll be asked to create a username and password as it will be your first time using this OS.
+Subsequently, you will now be signed in automatically as the default user.
+Lastly, we’ll need to run an update on the new OS. You can accomplish this by running:
+sudo apt update && sudo apt upgrade
+
+step 4: install all the required python packages ( Python 3 was preinstalled on Ubuntu)
+remember, you are running on Linux (with WSL), so all the Python installed on your Windows 10 would not directly work here.
+
+Install Python (preinstalled)
+    which python3 
+Install Pip 
+    sudo apt install python3-pip
+Install VirtualEnv
+    sudo apt-get install python3-venv
+Tips:
+   You need to add the path (where installed virtualenv) into PATH environment
+# add virtualenv into PATH
+export PATH="/home/davidp/.local/bin:$PATH"   (change to your own path, here davidp is my user)
+
+Install VirtualEnvWrapper-win
+
+    pip3 install virtualenvwrapper-win
+    
+step 5: create your venv for your project
+create your project directory, I name it restfulapiDemo, change directory and go inside this directory
+
+python3 -m venv demovenv
+    
+Now, you are done
+
+To start it, just follow the normal step
+
+go to project, /env/bin/activate
+
+davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo$ source demovenv/bin/activate
+(demovenv) davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo$
+
+That is it, you are in venv, keep it up.
+
