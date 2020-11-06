@@ -1,0 +1,60 @@
+Now, it is the time to install Flask, and run it inside VENV
+
+For some reason, the Flask install on Windows 10 VENV did not work out, I will try to figure it out later.
+
+Here it is the demo for Ubuntu VENV 
+
+davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo$ source demovenv/bin/activate
+(demovenv) davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo$
+
+(demovenv) davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo$ pip3 install flask
+Collecting flask
+  Downloading Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+     |████████████████████████████████| 94 kB 3.5 MB/s
+Collecting itsdangerous>=0.24
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Werkzeug>=0.15
+  Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+     |████████████████████████████████| 298 kB 10.4 MB/s
+Collecting click>=5.1
+  Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+     |████████████████████████████████| 82 kB 1.8 MB/s
+Collecting Jinja2>=2.10.1
+  Downloading Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+     |████████████████████████████████| 125 kB 13.1 MB/s
+Collecting MarkupSafe>=0.23
+  Downloading MarkupSafe-1.1.1-cp38-cp38-manylinux1_x86_64.whl (32 kB)
+Installing collected packages: itsdangerous, Werkzeug, click, MarkupSafe, Jinja2, flask
+Successfully installed Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.2 flask-1.1.2 itsdangerous-1.1.0
+(demovenv) davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo$
+(demovenv) davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo$ flask run
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Usage: flask run [OPTIONS]
+
+Error: Could not locate a Flask application. You did not provide the "FLASK_APP" environment variable, and a "wsgi.py" or "app.py" module was not found in the current directory.
+(demovenv) davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo$
+(demovenv) davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo$ ls -al
+total 0
+drwxr-xr-x 1 davidp davidp 512 Nov  5 23:23 .
+drwxr-xr-x 1 davidp davidp 512 Nov  5 23:07 ..
+drwxr-xr-x 1 davidp davidp 512 Nov  5 23:25 demovenv
+(demovenv) davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo$ cd demovenv
+(demovenv) davidp@DESKTOP-PK38D28:~/projects/restfulapiDemo/demovenv$ ls -al
+total 0
+drwxr-xr-x 1 davidp davidp 512 Nov  5 23:25 .
+drwxr-xr-x 1 davidp davidp 512 Nov  5 23:23 ..
+drwxr-xr-x 1 davidp davidp 512 Nov  5 23:50 bin
+drwxr-xr-x 1 davidp davidp 512 Nov  5 23:23 include
+drwxr-xr-x 1 davidp davidp 512 Nov  5 23:23 lib
+lrwxrwxrwx 1 davidp davidp   3 Nov  5 23:23 lib64 -> lib
+-rw-r--r-- 1 davidp davidp  69 Nov  5 23:25 pyvenv.cfg
+drwxr-xr-x 1 davidp davidp 512 Nov  5 23:25 share
+
+Now you have the Flask run on VENV, and it created a new subdirectory share
+
+
+
+
